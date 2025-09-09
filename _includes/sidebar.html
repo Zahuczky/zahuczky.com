@@ -1,0 +1,36 @@
+<aside class="sidebar">
+    <div class="site-header">
+        <div class="avatar">
+            <img src="/assets/img/zahu_avatar.png" alt="avatar" width="120" height="120">
+        </div>
+    </div>
+    
+    <nav class="nav-menu">
+        <ul>
+            {% for item in site.data.navigation.main %}
+            <li>
+                <a href="{{ item.url }}" 
+                   {% if item.external %}target="_blank" rel="noopener"{% endif %}
+                   {% if page.url == item.url %}class="active"{% endif %}>
+                    {{ item.title }}
+                    {% if item.external %}<span style="font-size: 0.8em;"> ↗</span>{% endif %}
+                </a>
+                {% if item.submenu %}
+                <ul class="nav-submenu">
+                    {% for subitem in item.submenu %}
+                    <li>
+                        <a href="{{ subitem.url | relative_url }}"
+                           {% if subitem.external %}target="_blank" rel="noopener"{% endif %}
+                           {% if page.url == subitem.url %}class="active"{% endif %}>
+                            {{ subitem.title }}
+                            {% if subitem.external %}<span style="font-size: 0.8em;"> ↗</span>{% endif %}
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+            </li>
+            {% endfor %}
+        </ul>
+    </nav>
+</aside>

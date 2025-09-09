@@ -1,0 +1,22 @@
+<footer class="footer">
+    <p>CopyLightᴬʳʳᵒʷˢᴱˣᴱ  {{ site.time | date: "%Y" }}, No rights reserved. Wear your seatbelt.</p>
+    <p>Proudly powered by Jekyll & GitHub Pages (my wordpress site got hakkkked)</p>
+        <p>If you feel like anything on my site infringes your copyrights please contact me at 
+             <span id="obfuscated-email"></span>
+             <script>
+                 (function() {
+                     var user = '{{ site.author.email | split: "@" | first }}';
+                     var domain = '{{ site.author.email | split: "@" | last }}';
+                     var email = user + '@' + domain;
+                     var reversed = email.split('').reverse().join('');
+                     var obfuscated = '';
+                     for (var i = 0; i < reversed.length; i++) {
+                         obfuscated += reversed[i];
+                         if (i % 3 === 0) obfuscated += '<span style="display:none">x</span>';
+                     }
+                     var span = document.getElementById('obfuscated-email');
+                     span.innerHTML = '<span style="unicode-bidi:bidi-override; direction:rtl">' + obfuscated + '</span>';
+                 })();
+             </script>
+        </p>
+</footer>

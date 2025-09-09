@@ -1,0 +1,35 @@
+---
+layout: default
+---
+
+<article class="post">
+    <div class="content-header">
+        <h1>{{ page.title }}</h1>
+        {% if page.description %}
+        <div class="content-meta">{{ page.description }}</div>
+        {% endif %}
+    </div>
+    
+    <div class="article-content html-content" 
+         id="github-content"
+         data-github-repo="{{ 'Zahuczky/zahuczkys-kfx-guide' }}"
+         data-github-content="{{ page.github_path }}">
+    </div>
+</article>
+
+<script src="{{ '/assets/js/github-loader.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/assSyntax.js' | relative_url }}" defer></script>
+<script>
+  window.addEventListener('load', () => {
+    const target = document.getElementById('github-content');
+
+    window.applyAssSyntax?.(target);
+
+    const mo = new MutationObserver(() => {
+      window.applyAssSyntax?.(target);
+      mo.disconnect();
+    });
+    mo.observe(target, { childList: true, subtree: true });
+  });
+</script>
+

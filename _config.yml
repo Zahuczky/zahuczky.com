@@ -1,0 +1,41 @@
+title: Zahuczky's Site
+tagline: My fansubbing related stuff
+description: Fansubbing resources, Aegisub documentation, and KFX guides
+url: "https://zahuczky.com"
+baseurl: ""
+author:
+  name: Zahuczky
+  email: info@zahuczky.com
+
+markdown: kramdown
+highlighter: rouge
+permalink: /:title/
+
+avatar: /assets/img/zahu_avatar.png
+
+kramdown:
+  parse_block_html: true
+
+collections:
+  kfx_guide:
+    output: true
+    permalink: /kfx-guide/:name
+
+defaults:
+  - scope:
+      path: ""
+      type: "kfx_guide"
+    values:
+      layout: "html-post"
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
+  - sync_content.rb

@@ -1,0 +1,27 @@
+main:
+  - title: Home
+    url: /
+  - title: KFX Guide
+    url: /kfx-guide/
+    collapsible: true
+    submenu:
+      - title: 0. K-Timing
+        url: /kfx-guide/0-k-timing/
+      - title: 1. Introduction
+        url: /kfx-guide/1-introduction/
+      - title: 2. The ASS Subtitle Format
+        url: /kfx-guide/2-the-ass-subtitle-format/
+  - title: Aegisub Docs
+    url: https://aegisubdocs.zahuczky.com/3.2/Main_Page/index.htm
+    external: true
+  - title: Unanimated's TS guide backup
+    url: https://tsguide.zahuczky.com
+    external: true
+  - title: Aegisub-Perspective-Motion  
+    url: /posts/perspmo/
+  - title: Typesetting Keyboard Guide  
+    url: https://github.com/Zahuczky/2nd-typesetting-keyboard
+    external: true
+  - title: My GitHub
+    url: https://github.com/Zahuczky
+    external: true
