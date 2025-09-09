@@ -3,6 +3,8 @@ layout: post
 title: "How to use perspmo"
 permalink: /posts/perspmo/
 description: "Karaoke timing is the easiest part, so don't worry (for now)"
+redirect_from:
+    - /aegisub-perspective-motion/
 ---
 
 # Aegisub-Perspective-Motion
