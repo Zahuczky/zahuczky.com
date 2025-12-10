@@ -6,6 +6,18 @@
         <div class="avatar">
             <img src="/assets/img/zahu_avatar.png" alt="avatar" width="120" height="120">
         </div>
+                <script>
+                (function(){
+                    var img = document.querySelector('#site-sidebar .avatar img');
+                    if (!img) return;
+                    var m = new Date().getMonth(); // 0 = Jan, 11 = Dec
+                    if (m === 11 || m === 0) {
+                        img.src = '/assets/img/zahu_christmas_avatar.png';
+                    } else {
+                        img.src = '/assets/img/zahu_avatar.png';
+                    }
+                })();
+                </script>
         <h1 class="site-title">{{ site.title }}</h1>
         <p class="site-tagline">{{ site.tagline }}</p>
     </div>
