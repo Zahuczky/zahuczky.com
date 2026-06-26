@@ -1,5 +1,6 @@
 <footer class="footer">
-    <p>CopyLightᴬʳʳᵒʷˢᴱˣᴱ  {{ site.time | date: "%Y" }}, No rights reserved. Wear your seatbelt.</p>
+    <p>CopyLightᴬʳʳᵒʷˢᴱˣᴱ  <span id="current-year"></span>, No rights reserved. Wear your seatbelt.</p>
+    <script>document.getElementById('current-year').textContent = new Date().getFullYear();</script>
     <p>Proudly powered by Jekyll & GitHub Pages (my wordpress site got hakkkked)</p>
         <p>If you feel like anything on my site infringes your copyrights please contact me at 
              <span id="obfuscated-email"></span>
